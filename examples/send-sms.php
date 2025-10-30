@@ -6,14 +6,14 @@ use Smstools\Client;
 
 $smstools = new Client('your-client-id', 'your-client-secret');
 
-// SMS versturen
+// Send Message
 $response = $smstools->sms()->send(
     to: '32470000000',
-    message: 'Testbericht via de PHP SDK!',
+    message: 'Hello world!',
     sender: 'Smstools'
 );
 
 print_r($response);
 
-// Balance ophalen
+// Get Balance
 print_r($smstools->balance()->get());

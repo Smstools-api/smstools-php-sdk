@@ -18,7 +18,7 @@ class Sms
      * {
      *  "to": "3247....",
      *  "message": "Hallo",
-     *  "sender": "XIS" (optioneel)
+     *  "sender": "Smstools"
      * }
      */
     public function send(string $to, string $message, ?string $sender = null, array $extra = []): array
@@ -26,11 +26,8 @@ class Sms
         $payload = array_merge([
             'to' => $to,
             'message' => $message,
+            'sender' => $sender
         ], $extra);
-
-        if ($sender) {
-            $payload['sender'] = $sender;
-        }
 
         return $this->client->post('/message/send', $payload);
     }

@@ -17,7 +17,7 @@ class Voice
      * Example payload:
      * {
      *  "to": "3247....",
-     *  "message": "Hallo",
+     *  "message": "Hello world",
      * }
      */
     public function send(string $to, string $message, array $extra = []): array

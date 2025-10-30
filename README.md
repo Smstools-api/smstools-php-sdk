@@ -1,4 +1,4 @@
-# 📱 Smstools PHP Client
+# 📱 Smstools PHP SDK
 
 A simple PHP SDK for the [Smstools.com](https://www.smstools.com) API (v1).  
 This client provides an easy way to send SMS or Voice messages and manage your account using your `client_id` and `client_secret`.
@@ -44,8 +44,8 @@ $client = new Client('your-client-id', 'your-client-secret');
 try {
     $response = $client->sms()->send(
         to: '32470000000',
-        message: 'Hello from Smstools PHP SDK!',
-        sender: 'XIS'
+        message: 'Hello World!',
+        sender: 'Smstools'
     );
 
     echo "✅ Message sent successfully!\n";
