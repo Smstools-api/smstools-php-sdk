@@ -25,10 +25,12 @@ $client = new Client(
 
 ## All requests automatically include:
 
+```bash
 X-Client-Id: YOUR_CLIENT_ID
 X-Client-Secret: YOUR_CLIENT_SECRET
+```
 
-## 💬 Usage Examples
+## 💬 Examples
 
 ### Send an SMS
 
@@ -51,5 +53,23 @@ try {
 
 } catch (Exception $e) {
     echo "❌ Error sending SMS: " . $e->getMessage();
+}
+```
+
+### Get current balance
+
+```php
+require 'vendor/autoload.php';
+
+use Smstools\Client;
+
+$client = new Client('your-client-id', 'your-client-secret');
+
+try {
+    $response = $client->balance()->get();
+    print_r($response);
+
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
 }
 ```
