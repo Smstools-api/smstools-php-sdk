@@ -1,0 +1,14 @@
+{
+    "name": "smstools-api/smstools-php-sdk",
+    "description": "Simple PHP SDK for smstools.be",
+    "type": "library",
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Smstools\\": "src/"
+        }
+    }
+}
